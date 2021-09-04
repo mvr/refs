@@ -1,0 +1,7 @@
+auto/
+*.blg
+*.bib.done
+*-bibtex.bib
+*-old.bib
+
+*expanded*
