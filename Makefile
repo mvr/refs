@@ -5,10 +5,10 @@ scohesion: scohesion.bib.done
 
 %.bib.done: %.bib
 	# Validate and normalize biblatex source
-	biber --tool --output-safechars --fixinits --isbn-normalise --output_indent=2 --output_fieldcase=lower --output_encoding=ascii --configfile=biber-tool.conf --output_file=$< $<
+	biber --tool --output-safechars --fixinits --isbn-normalise --output_indent=2 --output_fieldcase=lower --output_encoding=ascii --output-field-order=title,names,dates --configfile=biber-tool.conf --output_file=$< $<
 
 	# Export a version that is almost compatible with bibtex
-	biber --tool --output-safechars --fixinits --isbn-normalise --output_indent=2 --output_fieldcase=lower --output_encoding=ascii --output-resolve --configfile=biber-tool.conf --output_file=$*-expanded.bib $<
+	biber --tool --output-safechars --fixinits --isbn-normalise --output_indent=2 --output_fieldcase=lower --output_encoding=ascii --output-field-order=title,names,dates --output-resolve --configfile=biber-tool.conf --output_file=$*-expanded.bib $<
 
 	# fix the broken bibtex
 	python bibtex-compatibility.py $*
