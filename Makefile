@@ -1,7 +1,8 @@
-all: optics scohesion
+all: optics scohesion tiny
 optics: optics.bib.done
 scohesion: scohesion.bib.done
-.PHONY : all optics scohesion
+tiny: tiny.bib.done
+.PHONY : all optics scohesion tiny
 
 %.bib.done: %.bib
 	# Validate and normalize biblatex source
