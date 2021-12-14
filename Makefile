@@ -13,8 +13,8 @@ tiny: tiny.bib.done
 
 	# fix the broken bibtex
 	python bibtex-compatibility.py $*
-	perl -i -pe 's/\\i{}/i/g;' -pe 's/{\\i}/i/g;' $<
-	perl -i -pe 's/\\i{}/i/g;' -pe 's/{\\i}/i/g;' $*-bibtex.bib
+	perl -i -pe 's/\\i\{\}/i/g;' -pe 's/\{\\i\}/i/g;' $<
+	perl -i -pe 's/\\i\{\}/i/g;' -pe 's/\{\\i\}/i/g;' $*-bibtex.bib
 
 	touch $*.bib.done
 
