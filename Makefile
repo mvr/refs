@@ -1,10 +1,12 @@
-all: optics scohesion tiny kenzo classifying
+all: optics scohesion tiny kenzo classifying quantum life
 optics: optics.bib.done
 scohesion: scohesion.bib.done
 tiny: tiny.bib.done
 kenzo: kenzo.bib.done
 classifying: classifying.bib.done
-.PHONY : all optics scohesion tiny kenzo classifying
+quantum: quantum.bib.done
+life: life.bib.done
+.PHONY : all optics scohesion tiny kenzo classifying quantum life
 
 %.bib.done: %.bib
 	# Validate and normalize biblatex source
