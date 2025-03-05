@@ -1,9 +1,8 @@
 mvr's bibfiles
 ==============
 
+* `types.bib`: type theory
 * `optics.bib`: optics/lenses
-* `scohesion.bib`: bunched dependent type theory
-* `tiny.bib`: Tiny objects in geometry and logic
 * `life.bib`: Conway's Game of Life
 * `kenzo.bib`: Effective Algebraic Topology
 
