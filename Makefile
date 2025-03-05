@@ -1,12 +1,11 @@
-all: optics scohesion tiny kenzo classifying quantum life
+all: types optics kenzo quantum life cv
 optics: optics.bib.done
-scohesion: scohesion.bib.done
-tiny: tiny.bib.done
 kenzo: kenzo.bib.done
-classifying: classifying.bib.done
+types: types.bib.done
 quantum: quantum.bib.done
 life: life.bib.done
-.PHONY : all optics scohesion tiny kenzo classifying quantum life
+cv: cv.bib.done
+.PHONY : all types optics kenzo quantum life cv
 
 %.bib.done: %.bib
 	# Validate and normalize biblatex source
@@ -23,5 +22,7 @@ life: life.bib.done
 	touch $*.bib.done
 
 clean:
-	rm *.blg
+	rm -f *.blg
 	rm -rf auto
+	rm -f *.done
+	rm -f *-expanded.bib
